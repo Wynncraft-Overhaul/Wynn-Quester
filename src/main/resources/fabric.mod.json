@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "wynn-quester",
+	"version": "${version}",
+	"name": "Wynn quester",
+	"description": "Provides an easy way to find video quest guides in-game.",
+	"authors": [
+		"Commander07"
+	],
+	"contact": {
+		"sources": "https://github.com/Wynncraft-Overhaul/Wynn-Quester"
+	},
+	"license": "MIT",
+	"icon": "assets/wynnquester/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "io.github.wynncraft_overhaul.wynnquester.WynnQuester"
+		]
+	},
+	"mixins": [
+		"wynn-quester.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {}
+}
