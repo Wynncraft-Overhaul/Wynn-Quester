@@ -41,6 +41,9 @@ public class WynnQuester implements ModInitializer {
         } catch (IOException | URISyntaxException | InterruptedException ex) {
             LOGGER.error("Failed to update 'wynnquester/quests.json'");
             quests = GSON.fromJson(Files.newBufferedReader(FabricLoader.getInstance().getConfigDir().resolve("wynnquester/quests.json")), JsonObject.class);
+            if (quests == null) {
+                quests = GSON.fromJson("{}", JsonObject.class);
+            }
         }
     }
 
